@@ -33,9 +33,28 @@ from runner.koan import *
 #
 # Your goal is to write the score method.
 
+def is_one(item):
+    return True if item == 1 else False
+
+
+def is_five(item):
+    return True if item == 5 else False
+
+
+def apply_simple_rules(dice):
+    pass
+
+
+def apply_threes_rules(srtd):
+    pass
+
+
 def score(dice):
     # You need to write this method
-    pass
+    srtd = sorted(dice)
+    if (len(dice) < 3): return apply_simple_rules(srtd)
+    fltrd, score = apply_threes_rules(srtd)
+    return score + apply_simple_rules(fltrd)
 
 
 class AboutScoringProject(Koan):
