@@ -42,11 +42,13 @@ def is_five(item):
 
 
 def apply_simple_rules(dice):
-    pass
+    one_score = len(filter(is_one(), dice)) * 100
+    five_score = len(filter(is_five(), dice)) * 50
+    return one_score + five_score
 
 
 def apply_threes_rules(srtd):
-    pass
+    len
 
 
 def score(dice):
